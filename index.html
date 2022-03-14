@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <section class="main-section">
+      <div class="container">
+        <div class="wrapper">
+          <h1>Добавление товара</h1>
+         <div class="select-wrapper">
+          <select name="name" id="option-sort">
+            <option value="default">По умолчанию</option>
+            <option value="max-price">Максимальная цена</option>
+            <option value="min-price">Минимальная цена</option>
+          </select>
+         </div>
+        </div>
+
+        <div class="main-wrapper">
+          <div class="wrapper-form">
+            <form name="add-product">
+              <div>
+                <label for="name">
+                  Наименование товара
+                </label>
+                <input type="text" name="title" placeholder="Введите наименование товара" autocomplete="off" maxlength="20"  required>
+                <p class="validate-msg">Поле является обязательным</p>
+              </div>
+
+              <div>
+                <label for="subtitle">
+                  Описание товара
+                </label>
+                <textarea type="text" name="subtitle" placeholder="Описание товара" maxlength="150" autocomplete="off" required></textarea>
+                <p class="validate-msg">Поле является обязательным</p>
+              </div>
+
+              <div>
+                <label for="url">
+                  Ссылка на изображение товара
+                </label>
+                <input type="text" name="url" placeholder="Введите ссылку" required>
+                <p class="validate-msg">Поле является обязательным</p>
+              </div>
+
+              <div>
+                <label for="price">
+                  Цена товара
+                </label>
+                <input type="number" min="1" name="price" autocomplete="off" placeholder="Введите цену" required>
+                <p class="validate-msg">Поле является обязательным</p>
+              </div>
+
+              <button class="submit-btn">Добавить товар</button>
+            </form>
+          </div>
+          <div class="wrapper-crads"></div>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </main>
+

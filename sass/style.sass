@@ -1,0 +1,226 @@
+*
+  font-family: 'Source Sans Pro', sans-serif
+  box-sizing: border-box
+
+// reset
+
+h1,h2,p
+  margin: 16px 0 0 0
+  font-style: normal
+  font-weight: normal
+  letter-spacing: -0.02em
+
+button, input, textarea, select
+  border: none
+  border-radius: 4px
+  outline: none
+
+label, form
+  display: flex
+  flex-direction: column
+
+
+.container
+  max-width: 1380px
+  margin: 0 auto
+
+// main style
+
+.main-section
+  padding: 30px 0
+  .wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  h1
+    font-weight: 600
+    font-size: 28px
+    line-height: 35px
+    color: #3F3F3F
+
+  // style select
+  .select-wrapper
+    position: relative
+    &:before
+      content:''
+      position: absolute
+      top: 50%
+      right: 10px
+      transform: translateY(-20%)
+      display: block
+      width: 10px
+      height: 10px
+      pointer-events: none
+      background: url('/images/icons/arrowDownSelect.svg') no-repeat
+    & > select
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+      background-color: #FFFFFF
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+      padding: 10px 30px 10px 16px
+      font-size: 12px
+      line-height: 15px
+      color: #B4B4B4
+      cursor: pointer
+    & > select::-ms-expand
+      display: none
+
+  // style form
+  .wrapper-form
+    & > form
+      width: 332px
+      padding: 33px 20px 24px 28px
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02)
+      & > div
+        label
+          display: inline-block
+          margin-top: 16px
+          font-size: 10px
+          line-height: 13px
+          color: #49485e
+          &::after
+            content: ''
+            position: absolute
+            width: 5px
+            height: 5px
+            transition: width 0.3s ease
+            border-radius: 50%
+            background-color: #FF8484
+        input, textarea
+          width: 100%
+          height: 36px
+          padding-left: 16px
+          margin-top: 4px
+          line-height: 13px
+          color: #49485E
+          box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02)
+        textarea
+            height: 108px
+            resize: none
+            line-height: 15px
+        p
+          font-style: normal
+          font-weight: 400
+          margin: 0
+          font-size: 0px
+          line-height: 10px
+          letter-spacing: -0.02em
+          color: #FF8484
+          transition: 0.3s ease
+      & > .validation-error
+        label
+          display: inline-block
+        input, textarea
+          border: 1px solid #FF8484
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+          transition: 0.3s ease
+        p
+          font-size: 8px
+          transition: 0.3s ease
+          margin-top: 4px
+      & > button
+        transition:  0.3s ease
+        width: 100%
+        height: 36px
+        margin-top: 24px
+        background: #EEEEEE
+        border-radius: 10px
+        font-weight: 600
+        font-size: 12px
+        line-height: 15px
+        text-align: center
+        color: #B4B4B4
+        cursor: pointer
+      .validate-btn
+        background-color: #7BAE73
+        color: #FFFFFF
+        transition:  0.3s ease
+  .main-wrapper
+    display: flex
+    justify-content: space-between
+    margin-top: 16px
+  .wrapper-crads
+    display: flex
+    flex-direction: wrap
+    flex-wrap: wrap
+    margin-left: 16px
+
+  // style cards
+  .card
+    position: relative
+    max-width: 328px
+    cursor: pointer
+    transition: margin 0.3s ease
+    margin-left: 16px
+    & > img + img
+      margin: 0
+      border-radius: 4px 4px 0px 0px
+      width: 100%
+      height: 200px
+    & > div
+      & > h2
+        font-weight: 600
+        font-size: 20px
+        line-height: 25px
+        color: #3F3F3F
+      & > p
+        min-height: 120px
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        color: #3F3F3F
+      & > h3
+        font-weight: 600
+        font-size: 24px
+        line-height: 30px
+        color: #3F3F3F
+    .trash
+      position: absolute
+      right: -12px
+      top: -12px
+      height: 0px
+      transition: height 0.3s ease
+    &:hover
+      .trash
+        display: block
+        transition: height 0.3s ease
+        height: 30px
+        &:hover
+          transition: height 0.3s ease
+          height: 40px
+
+@media (max-width: 1400px)
+  .main-section
+    .wrapper-crads
+      justify-content: center
+
+@media (max-width: 800px)
+  .main-section
+    .main-wrapper
+      flex-direction: column
+      justify-content: center
+    .wrapper-form
+      & > form
+        &:first-child
+          margin: 16px auto
+          flex-direction: column
+    .wrapper-crads
+      margin: 0
+
+@media (max-width: 692px)
+  .main-section
+    .main-wrapper
+      .card
+        margin-left: 0
+
+@media (max-width: 440px)
+  .main-section
+    .main-wrapper
+      .wrapper-form
+        & > form
+          width: 290px
+    .wrapper
+      flex-direction: column
+    .select-wrapper
+      margin-top: 16px
