@@ -58,7 +58,6 @@ const allProductsObject = productsDB.reduce((acc, curr) =>  {
 const optionMaxMinDefault = document.getElementById('option-sort');
 const cardsContainer = document.querySelector('.wrapper-crads');
 const onSubmitBtn = document.querySelector('.submit-btn');
-const inputNumber = document.querySelector('[type="number"]');
 const form = document.forms['add-product'];
 const formAllElements = [...form.elements];
 
