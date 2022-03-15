@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
@@ -19,8 +20,8 @@
          <div class="select-wrapper">
           <select name="name" id="option-sort">
             <option value="default">По умолчанию</option>
-            <option value="max-price">Максимальная цена</option>
-            <option value="min-price">Минимальная цена</option>
+            <option value="max-price">Максимальная</option>
+            <option value="min-price">Минимальная</option>
           </select>
          </div>
         </div>
@@ -29,10 +30,10 @@
           <div class="wrapper-form">
             <form name="add-product">
               <div>
-                <label for="name">
+                <label class="control-label" for="name">
                   Наименование товара
                 </label>
-                <input type="text" name="title" placeholder="Введите наименование товара" autocomplete="off" maxlength="20"  required>
+                <input type="text" name="title" placeholder="Введите наименование товара" autocomplete="off" maxlength="30"  required>
                 <p class="validate-msg">Поле является обязательным</p>
               </div>
 
@@ -45,7 +46,7 @@
               </div>
 
               <div>
-                <label for="url">
+                <label class="control-label" for="url">
                   Ссылка на изображение товара
                 </label>
                 <input type="text" name="url" placeholder="Введите ссылку" required>
@@ -53,7 +54,7 @@
               </div>
 
               <div>
-                <label for="price">
+                <label class="control-label" for="price">
                   Цена товара
                 </label>
                 <input type="number" min="1" name="price" autocomplete="off" placeholder="Введите цену" required>

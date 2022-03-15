@@ -60,13 +60,14 @@ const cardsContainer = document.querySelector('.wrapper-crads');
 const onSubmitBtn = document.querySelector('.submit-btn');
 const form = document.forms['add-product'];
 const formAllElements = [...form.elements];
+const allInputs = document.querySelectorAll('input');
 
 // Events
 form.addEventListener('submit', onFormSubmit);
 cardsContainer.addEventListener('click', onDeleteHandler);
 optionMaxMinDefault.addEventListener('change', sortInput);
 
-validate(formAllElements);
+validate(allInputs);
 renderAllProducts(allProductsObject);
 
 function renderAllProducts(products) {
@@ -77,9 +78,7 @@ function renderAllProducts(products) {
   };
   const cardsHTML = Object.values(products).reduceRight((acc, curr) => acc + listItemTemplate(curr),'');
 
-  cardsContainer.insertAdjacentHTML('afterbegin', cardsHTML, {
-    TransformStreamDefaultController: true,
-  });
+  cardsContainer.insertAdjacentHTML('afterbegin', cardsHTML);
 };
 
 function onFormSubmit(e) {
